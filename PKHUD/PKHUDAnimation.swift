@@ -12,7 +12,7 @@ import QuartzCore
 
 public final class PKHUDAnimation {
     
-    static let discreteRotation: CAAnimation = {
+    public static let discreteRotation: CAAnimation = {
         let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
         animation.values = (0...12).map { NSNumber(value: Double(Double($0) * Double.pi / 6.0)) }
         animation.keyTimes = (0...12).map { NSNumber(value: Double(Double($0) / 12.0)) }
@@ -23,7 +23,7 @@ public final class PKHUDAnimation {
     }()
 
     
-    static let continuousRotation: CAAnimation = {
+    public static let continuousRotation: CAAnimation = {
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0
         animation.toValue = 2.0 * .pi
