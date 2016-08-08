@@ -15,7 +15,7 @@ internal class Window: UIWindow {
     internal let frameView: FrameView
     internal init(frameView: FrameView = FrameView()) {
         self.frameView = frameView
-        super.init(frame: UIApplication.shared().delegate!.window!!.bounds)
+        super.init(frame: UIApplication.shared.delegate!.window!!.bounds)
         commonInit()
     }
 
@@ -28,7 +28,7 @@ internal class Window: UIWindow {
     private func commonInit() {
         rootViewController = WindowRootViewController()
         windowLevel = UIWindowLevelNormal + 500.0
-        backgroundColor = UIColor.clear()
+        backgroundColor = UIColor.clear
         
         addSubview(backgroundView)
         addSubview(frameView)
